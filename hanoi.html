@@ -1,9 +1,13 @@
 <html>
 <script>
+N = 0
 function move(n,source,destination,temp)
-{	if(n==1)	
+{	
+	if(n==1)	
 	{
+		N++;
 		document.writeln("move  " + source +" to " +destination +"  <br>");
+		console.log("move" + source + "to" + destination);
 	}
 	else
 	{
@@ -12,6 +16,7 @@ function move(n,source,destination,temp)
 		move(n-1,temp,destination,source);
 	}
 }
-move(7,1,3,2);//move 3 disks from 3 to using 2 as storge
-</script>
+move(7,"A","B","C");//move 3 disks from 3 to using 2 as storge
+document.writeln("lines"+" moving" + N);
+</script> 
 </html>
