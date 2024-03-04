@@ -1,0 +1,17 @@
+<html>
+<script>
+function move(n,source,destination,temp)
+{	if(n==1)	
+	{
+		document.writeln("move  " + source +" to " +destination +"  <br>");
+	}
+	else
+	{
+		move(n-1,source,temp,destination);
+		move(1,source,destination,temp);
+		move(n-1,temp,destination,source);
+	}
+}
+move(7,1,3,2);//move 3 disks from 3 to using 2 as storge
+</script>
+</html>
