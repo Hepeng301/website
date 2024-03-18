@@ -1,0 +1,50 @@
+<html>
+<head>
+<body>
+<style>
+.small-all{
+display: flex;
+margin:1rem 13%;
+}
+.small {
+    border-color: red transparent transparent transparent;
+    border-style: solid;
+    border-top-width: 9.375px;
+    border-right-width: 15px;
+    border-left-width: 15px;
+    height: 0;
+    margin-top: 9.375px;
+    margin-bottom: 6.02679px;
+    position: relative;
+    width: 0;
+    margin: 2rem 0.8rem;
+}
+
+.small:before,.small:after {
+    border-color: red transparent transparent transparent;
+    border-style: solid;
+    border-top-width: 9.375px;
+    border-right-width: 15px;
+    border-left-width: 15px;
+    content: '';
+    display: block;
+    height: 0;
+    left: -15px;
+    position: absolute;
+    top: -9.375px;
+    width: 0;
+}
+.small:before {
+    transform: rotate(70deg);
+}
+.small:after {
+    transform: rotate(-70deg);
+}</style>
+</head>
+<body>
+<div class="small"></div>
+</body>
+</html>
+
+
+
