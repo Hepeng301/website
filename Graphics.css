@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .oval
 	{
 	width: 200px;
@@ -55,4 +56,63 @@
             background-color: tomato;
             transform: rotate(-45deg);
         
+=======
+.oval
+	{
+	width: 200px;
+        height: 100px;
+        background: #FFD688;
+        border-radius: 100px / 50px;
+	background-repeat:repeat-y;
+}
+.heart-shaped
+		{	       
+            position: relative;
+            top: 100px;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+}
+        
+        .heart-shaped:before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: blue;
+        }
+        
+        .heart-shaped:after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+        
+        .heart-shaped:before {
+            background-color: tomato;
+        }
+        
+        .heart-shaped:after {
+            background-color: tomato;
+        }
+        
+        .heart-shaped {
+            position: relative;
+            top: 100px;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            transform: rotate(-45deg);
+        
+>>>>>>> c483377c09aef1db584983f1b420a0ac9600dbf1
 }
