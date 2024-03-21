@@ -1,0 +1,12 @@
+
+div
+{
+   :https://zhongyanlin.github.io/site/wywgcss/editcss.css;
+   background:radial-gradient(ellipse at center,green,red);
+   border-radius:50%;
+   -webkit-border-radius:50%;
+   -moz-border-radius:50%;
+   color:purple;
+   height:500px;
+   width:500px
+}
