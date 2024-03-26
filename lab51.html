@@ -3,26 +3,22 @@
 <style>
 @keyframes movep
 {
-	0%{background-position:500px 500px;transform:rotate(0deg);}
-	100%{background-position:500px 500px;transform:rotate(-180deg);}
+	0%{transform:rotate(0deg);}
+	100%{transform:rotate(-180deg);}
 }
 div
 {	
-	width:100px;
-	height:100px;
-	background-position:100px 100px;
-	background-image:url('123.png');
+	width:200px;
+	height:200px;
+	background-image:url('233.jpg');
 	background-size:cover;
-	transform-origin:200px 0px;
-	animation:movep 3s;
-	animation-fill-mode:forwards;
+	transform-origin:300px 100px;
+	animation:movep 5s infinite;
 	
-	
-
 }
 </style>
 </head>
 <body>
-<div ></div>
+<div></div>
 </body>
 </html>
