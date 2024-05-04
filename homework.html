@@ -1,0 +1,105 @@
+<html>
+<body>
+Number of Disks<select id=numdisks></select>
+<input type=button id=startbtn value="Start"class=butlooking onclick="startgame()"
+onmouseenter="showhint('select number of disks then click this button to start' , 'start')"
+onmouseout="hidehint('start')" >
+
+<input type=button id=pausetbtn value="Pause"class=butlooking onclick="pausegame()"
+onmouseenter="showhint('pause the game' , 'pause')"
+onmouseout="hidehint('pause')" >
+
+<input type=button id=resumebtn value="Resume"class=butlooking onclick="resumegame()"
+onmouseenter="showhint('resume the game' , 'resume')"
+onmouseout="hidehint('resume')" >
+
+Time Period<select id = period></select>
+<script>
+let s = docment.getElementById('numdisks');
+for (let n = 0; n<=8;n++)
+{
+	s.options[n] = new Option(n+2,n+2);
+}
+s = document.getElementById('period');
+for (let n = 0; n<=8;n++)
+	s.option[n] = new Option(n*0.5,n*0.5);
+function showhint(hint,key)
+{
+	let dv = document.createElement('div');
+	dv.id = key
+	dv.style = cssText = 'position:absolute;'background-color:yellow;collor:purple;box-shadow:3px 3px #67'
+	dv.className = 'cname';
+	dv.innerHTML = hint;
+	document.body.appendChild(dv);
+}
+function hidehint(key)
+{
+	let dv = document.getElementById(key);
+	dv.parentNode.removeChild(dv); 
+}
+var orderOfInstruction;
+var handle
+
+function startgame()
+{
+	let s = document.getElementById('numdisks');
+	let nd = s.options[s.selectedIndex].value;
+	N = parselnt(nd);
+	tower(N);
+	move();    // generate instructions
+	movedisk(0);  //execute 1st instruction, and schedule 2nd
+}
+function pausegame()
+{
+	clearTimeout(handle);
+}
+function resumegame()
+{
+	movedisk(orderOfInstruction);
+}
+let time;
+window.onblur = function(){time = (new Data()).getTime();}
+window.onfocus = function()
+{ 
+	let time1 = (new Data()).getTime();
+	let diff = time1 - time;
+	if(diff > 2*60*1000) document.body.innHTML = ";
+	localStorage['void'] = 1;
+}
+window.onload = function()
+{
+	let x = localStorage['void'];
+	if (x != null || x!='undefined' || x==1)
+		document.body.innHTML = ";
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+</script>
