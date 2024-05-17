@@ -1,0 +1,54 @@
+<html>
+<style>
+    :root {
+        --width: 400px;
+        --height: 400px;
+        --half-radius: -200px;
+    }
+    #heart {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: var(--width);
+        height: var(--height);
+        background-color: #79F5FF;
+        transform: rotate(45deg);
+    }
+    #heart::before {
+        content: "";
+        position: absolute;
+        width: var(--width);
+        height: var(--height);
+        border-radius: 50%;
+        background-color: #79F5FF;
+        left: var(--half-radius);
+        /* 最后一行相当于->  right: var(--half-radius) */
+    }
+    #heart::after {
+        content: "";
+        position: absolute;
+        width: var(--height);
+        height: var(--width);
+        border-radius: 50%;
+        background-color: #79F5FF;
+        top: var(--half-radius);
+        /* /* 最后一行相当于-> bottom: var(--half-radius) */ 
+    }
+    #text{
+	
+	position:relative;
+	font-size:30px;
+	font-weight:bold;
+	top:400px;
+	color:white;
+	left: 530px;
+
+}
+</style>
+
+<div id="heart"></div>
+<div id="text">唔。。谋。。垚，嗝。。尼。。过。。粘。piu。<br>( ˘ ³˘)❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤</div>
+</html>
